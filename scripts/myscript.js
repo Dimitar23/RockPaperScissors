@@ -41,7 +41,7 @@ function playRound(playerSelection, computerSelection) {
             return 0;
         }
     } else {
-        console.log("You\'ve entered an invalid value, please restart the game.");
+        console.log("You\'ve entered an invalid value, please retry. Valid options are Rock, Paper or Scissors.");
         return 0;
     }
 }
