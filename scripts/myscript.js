@@ -9,35 +9,35 @@ function getComputerChoice(){
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === "rock"){
         if(computerSelection === "rock"){
-            console.log("It\'s a draw! Rock equals Rock.");
+            console.log("Round draw! Rock ties Rock.");
             return 0;
         } else if(computerSelection === "paper"){
-            console.log("You lose! Paper beats Rock.");
+            console.log("You lose the round! Paper beats Rock.");
             return -1;
         } else{
-            console.log("You win! Rock beats Scissors.");
+            console.log("You won the round! Rock beats Scissors.");
             return 1;
         }
     } else if(playerSelection === "paper"){
         if(computerSelection === "rock"){
-            console.log("You win! Paper beats Rock.");
+            console.log("You won the round! Paper beats Rock.");
             return 1;
         } else if(computerSelection === "paper"){
-            console.log("It\'s a draw! Paper equals Paper.");
+            console.log("Round draw! Paper ties Paper.");
             return 0;
         } else{
-            console.log("You Lose! Scissors beat Paper.");
+            console.log("You lose the round! Scissors beat Paper.");
             return -1;
         }
     } else if(playerSelection === "scissors"){
         if(computerSelection === "rock"){
-            console.log("You Lose! Rock beats Scissors.");
+            console.log("You lose the round! Rock beats Scissors.");
             return -1;
         } else if(computerSelection === "paper"){
-            console.log("You Win! Scissors beat Paper.");
+            console.log("You won the round! Scissors beat Paper.");
             return 1;
         } else{
-            console.log("It\'s a Draw! Scissors equals Scissors.");
+            console.log("Round draw! Scissors ties Scissors.");
             return 0;
         }
     } else {
@@ -72,7 +72,7 @@ function game(){
         console.log("Computer round wins: " + computerWinCount);
 
         if(playerWinCount === 5){
-            console.log("Game Over! You Won!");
+            console.log("YOU WIN!");
             break;
         }
         else if(computerWinCount === 5){
