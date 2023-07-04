@@ -12,6 +12,7 @@ let playerWins = 0;
 let computerWins = 0;
 
 function playRound(playerSelection, computerSelection) {
+    console.log('clicked');
     if(playerSelection === computerSelection){
         // it's a tie
         console.log('tie');
@@ -36,7 +37,7 @@ function playRound(playerSelection, computerSelection) {
     }
 
     playerParagraph.textContent = `Player wins: ${playerWins}`;
-    computerParagraph = `Computer wins: ${computerWins}`;
+    computerParagraph.textContent = `Computer wins: ${computerWins}`;
 }
 
 const buttonRock = document.querySelector("#rock");
@@ -44,6 +45,6 @@ const buttonPaper = document.querySelector("#paper");
 const buttonScissors = document.querySelector("#scissors");
 
 
-//buttonRock.addEventListener('click', playRound('rock', getComputerChoice()));
-buttonPaper.addEventListener('click', playRound('paper', getComputerChoice()));
-buttonScissors.addEventListener('click', playRound('scissors', getComputerChoice()));
+buttonRock.addEventListener('click', () => playRound('rock', getComputerChoice()));
+buttonPaper.addEventListener('click', () => playRound('paper', getComputerChoice()));
+buttonScissors.addEventListener('click', () => playRound('scissors', getComputerChoice()));
