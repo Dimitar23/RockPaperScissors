@@ -29,6 +29,7 @@ function playRound(playerSelection, computerSelection) {
         playerWins++;
         console.log('playerwin');
         outcomeParagraph.textContent = 'This round is a player win';
+        playerParagraph.textContent = `Player wins: ${playerWins}`;
     } else if(
         (computerSelection === 'rock' && playerSelection === 'scissors') ||
         (computerSelection === 'paper' && playerSelection === 'rock') ||
@@ -37,10 +38,8 @@ function playRound(playerSelection, computerSelection) {
         computerWins++;
         console.log('computerwin');
         outcomeParagraph.textContent = 'This round is a computer win';
+        computerParagraph.textContent = `Computer wins: ${computerWins}`;
     }
-
-    playerParagraph.textContent = `Player wins: ${playerWins}`;
-    computerParagraph.textContent = `Computer wins: ${computerWins}`;
 
     if(playerWins === 5){
         outcomeParagraph.textContent = 'Game Over! Player wins the game';
